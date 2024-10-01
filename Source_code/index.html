@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASCENT Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+</head>
+
+<body>
+
+    <!-- Legends -->
+    <div id="legend" class="legend">
+        <ul>
+            <li>
+                <span class="polygon-feature"></span>
+                <span>State</span>
+            </li>
+            <li>
+                <span class="point-feature-1"></span>
+                <span>Airports</span>
+            </li>
+            <li>
+                <span class="line-feature"></span>
+                <span>Rivers</span>
+            </li>
+            <li>
+                <span class="point-feature-2"></span>
+                <span>Ports</span>
+            </li>
+        </ul>
+    </div>
+
+    <button id="toggleLegendButton" class="toggle-legend-button hide-legend" style="font-size: 22px;">Hide
+        Legend</button>
+
+    <!--Basemap Filters -->
+    <div class="basemap-filters">
+        <label style="font-size: 25px;">Select Basemap:</label><br>
+        <div class="radio-group" style="font-size: 20px;">
+            <div class="radio-item">
+                <input type="radio" id="Google" value="Google" name="basemap">
+                <label for="Google">Google Satellite Basemap</label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" id="osm" value="osm" name="basemap">
+                <label for="osm">Open Street Map (Default)</label>
+            </div>
+            <div class="radio-item">
+                <input type="radio" id="Natural_earth" value="Natural_earth" name="basemap">
+                <label for="Natural_earth">Natural Earth Raster</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layer Checkbox -->
+    <div class="filters" id="dataLayerSelect">
+        <label style="font-size: 25px;">Select Data Layers:</label><br>
+        <div class="checkbox-group" style="font-size: 20px;">
+            <div class="checkbox-item">
+                <input type="checkbox" id="NASCENT:india_state_boundary" value="NASCENT:india_state_boundary">
+                <label for="NASCENT:india_state_boundary">State Boundary</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="NASCENT:indian_airports" value="NASCENT:indian_airports">
+                <label for="NASCENT:indian_airports">Airports</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="NASCENT:indian_rivers" value="NASCENT:indian_rivers">
+                <label for="NASCENT:indian_rivers">Rivers</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="NASCENT:indian_ports" value="NASCENT:indian_ports">
+                <label for="NASCENT:indian_ports">Ports</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div id="map" class="map"></div>
+
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <!-- <button id="popup-closer" class="popup-closer">X</button> -->
+        <div id="popup-content"></div>
+    </div>
+
+    <div class="Note" style="font-size: 25px;">
+        <p style="color: rgb(255, 0, 0);">Click on particular feature to get information about it!</p>
+    </div>
+
+    <script src="map.js"></script>
+
+</body>
+
+</html>
