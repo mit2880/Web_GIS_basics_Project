@@ -5,7 +5,7 @@ This project is hands-on work on what we learned in the Web GIS course during ou
 ## Team Members:
 * [Harsh Chothani](https://github.com/Harsh-Chothani)
 * [Kaushal Kathiriya](https://github.com/Kaushal0609)
-* [Mit Borda](https://github.com/mit2880)
+* [Smit Bhuva](https://github.com/Smit-Bhuva)
 * [Anusha Parida](https://github.com/Anusha26399)
 
 ## Dependencies:
